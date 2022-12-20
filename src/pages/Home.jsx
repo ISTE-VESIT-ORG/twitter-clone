@@ -1,17 +1,24 @@
 import React from "react";
+import ExploreBar from "../components/ExploreBar";
+import HomeFeed from "../components/HomeFeed";
 import Layout from "../components/Layout";
 import Sidebar from "../components/Sidebar";
+
 const Home = () => {
-    return <Layout title="Home / Twitter">
-        <div className="h-screen flex flex-row">
-            {/* Sidebar  */}
-            <Sidebar />
-            {/* Homefeed Section  */}
-
-            {/* Right Explore bar */}
-
+  return (
+    <Layout title="Home / Twitter">
+      <div className="h-screen flex flex-row">
+        {/* Sidebar  */}
+        <Sidebar />
+        {/* Homefeed Section  */}
+        <div className="flex-1">
+          <HomeFeed />
         </div>
-    </Layout>;
+        {/* Right Explore bar */}
+        <ExploreBar />
+      </div>
+    </Layout>
+  );
 };
 
 export default Home;
